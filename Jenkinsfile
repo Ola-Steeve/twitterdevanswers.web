@@ -17,10 +17,9 @@ pipeline {
             }
             steps {
                 sh 'ssh -o StrictHostKeyChecking=no abell205@65.108.237.42 "\
-                cd frontend ;\
-                git pull origin dev; \
+                git pull origin main; \
                 npm run build;\
-                pm2 serve build 2202;\
+                pm2 serve build 4456;\
                 sudo systemctl reload nginx "'
             }
         }
